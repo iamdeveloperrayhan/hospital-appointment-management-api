@@ -14,6 +14,7 @@ class AppointmentPermission(BasePermission):
 
 
         return False
+    
 
 class BillPermission(BasePermission):
 

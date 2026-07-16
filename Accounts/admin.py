@@ -5,8 +5,6 @@ from .models import User
 
 # accounts/admin.py
 
-
-
 @admin.register(User)
 class CustomUserAdmin(UserAdmin):
     model = User
@@ -16,14 +14,37 @@ class CustomUserAdmin(UserAdmin):
         "full_name",
         "email",
         "phone_number",
+        "user_type",
         "is_staff",
         "is_active",
+        "date_joined",
+    )
+
+    list_filter = (
+        "user_type",
+        "is_staff",
+        "is_active",
+        "is_superuser",
     )
 
     ordering = ("id",)
 
+    search_fields = (
+        "email",
+        "full_name",
+        "phone_number",
+    )
+
     fieldsets = (
-        (None, {"fields": ("email", "password")}),
+        (
+            None,
+            {
+                "fields": (
+                    "email",
+                    "password",
+                )
+            },
+        ),
         (
             "Personal Info",
             {
@@ -31,6 +52,7 @@ class CustomUserAdmin(UserAdmin):
                     "full_name",
                     "phone_number",
                     "address",
+                    "user_type",
                 )
             },
         ),
@@ -46,7 +68,15 @@ class CustomUserAdmin(UserAdmin):
                 )
             },
         ),
-        ("Important Dates", {"fields": ("last_login", "date_joined")}),
+        (
+            "Important Dates",
+            {
+                "fields": (
+                    "last_login",
+                    "date_joined",
+                )
+            },
+        ),
     )
 
     add_fieldsets = (
@@ -59,6 +89,7 @@ class CustomUserAdmin(UserAdmin):
                     "full_name",
                     "phone_number",
                     "address",
+                    "user_type",
                     "password1",
                     "password2",
                     "is_staff",
@@ -67,5 +98,3 @@ class CustomUserAdmin(UserAdmin):
             },
         ),
     )
-
-    search_fields = ("email", "full_name", "phone_number")

@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth.tokens import default_token_generator
-
 from django.contrib.auth import get_user_model
+
 User = get_user_model()
 
 
@@ -20,7 +20,6 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         return User.objects.create_user(**validated_data)
-
 
 
 class UserSerializer(serializers.ModelSerializer):

@@ -38,17 +38,17 @@ from Dashboard.views import DashboardAPIView
 from django.urls import include
 
 router = DefaultRouter()
-router.register("bills", BillViewSet, basename="bill")
+router.register("bills", BillViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/register/", RegisterAPIView.as_view()),
     path("api/login/", TokenObtainPairView.as_view()),
-    path("api/refresh/", TokenRefreshView.as_view()),
+    path("api/token/refresh/", TokenRefreshView.as_view()),
     path("api/profile/", ProfileAPIView.as_view()),
-    path("api/dashboard/", DashboardAPIView.as_view()),
     path("api/forgot-password/", ForgotPasswordAPIView.as_view()),
     path("api/reset-password/", ResetPasswordAPIView.as_view()),
+    path("api/dashboard/", DashboardAPIView.as_view()),
     path("api/doctors/", DoctorListCreateAPIView.as_view()),
     path("api/doctors/<int:pk>/", DoctorDetailUpdateAPIView.as_view()),
     path("api/appointments/", AppointmentListCreateAPIView.as_view()),

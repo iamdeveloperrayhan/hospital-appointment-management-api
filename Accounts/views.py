@@ -25,7 +25,6 @@ User = get_user_model()
 class RegisterAPIView(CreateAPIView):
     serializer_class = RegisterSerializer
 
-
 class ProfileAPIView(RetrieveUpdateAPIView):
     serializer_class = UserSerializer
     permission_classes = [IsAuthenticated]

@@ -19,7 +19,7 @@ class DoctorListCreateAPIView(ListCreateAPIView):
         visiting_fee = self.request.query_params.get("ordering")
 
         if department:
-            queryset = queryset.filter(department=department)
+            queryset = queryset.filter(department__iexact=department)
 
         if doctor_id:
             queryset = queryset.filter(id=doctor_id)
