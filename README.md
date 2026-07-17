@@ -1768,7 +1768,6 @@ You can add the following GitHub cards after creating the repository.
 <img src="https://img.shields.io/github/last-commit/USERNAME/REPOSITORY?style=for-the-badge">
 
 </p>
----
 
 # 📜 License
 
