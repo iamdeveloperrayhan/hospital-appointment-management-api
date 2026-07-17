@@ -273,41 +273,31 @@ hospital-appointment-management-api/
 
 ## Authentication
 
-```text
-assets/screenshots/AuthenticationApis.png
-```
+![Authentication](assets/screenshots/AppointmentsApis.png)
 
 ---
 
 ## Doctor API
 
-```text
-assets/screenshots/DoctorsApis.png
-```
+![Authentication](assets/screenshots/DoctorsApis.png)
 
 ---
 
 ## Appointment API
 
-```text
-assets/screenshots/AppointmentsApis.png
-```
+![Authentication](assets/screenshots/AppointmentsApis.png)
 
 ---
 
 ## Billing API
 
-```text
-assets/screenshots/BllingApis.png
-```
+![Authentication](assets/screenshots/BillingApis.png)
 
 ---
 
 ## Dashboard
 
-```text
-assets/screenshots/DashboardApis.png
-```
+![Authentication](assets/screenshots/DashboardApis.png)
 
 ---
 
